@@ -1,0 +1,103 @@
+plugins {
+    id 'java-library'
+    id 'idea'
+    id 'net.neoforged.moddev' version '2.0.148'
+}
+
+version = mod_version
+group = mod_group_id
+base { archivesName = mod_id }
+java.toolchain.languageVersion = JavaLanguageVersion.of(21)
+
+repositories { mavenCentral() }
+
+// Local compile APIs only; optional integrations are never bundled or required at runtime.
+dependencies { compileOnly fileTree(dir: 'libs/compile', include: '*.jar') }
+
+neoForge {
+    version = neoforge_version
+    addModdingDependenciesTo sourceSets.test
+
+    runs {
+        client {
+            client()
+            gameDirectory = file('run')
+        }
+        minimalClient {
+            client()
+            gameDirectory = file('build/minimal-client-run')
+        }
+        server {
+            server()
+            programArgument '--nogui'
+            gameDirectory = file('build/server-run')
+        }
+        gameTestServer {
+            type = 'gameTestServer'
+            sourceSet = sourceSets.test
+            gameDirectory = file('build/game-test-run')
+            systemProperty 'neoforge.enabledGameTestNamespaces', project.mod_id
+        }
+    }
+
+    mods {
+        "${mod_id}" {
+            sourceSet sourceSets.main
+        }
+        verification {
+            sourceSet sourceSets.main
+            sourceSet sourceSets.test
+        }
+    }
+
+    // Source-folder grouping is per run; the verification group has the same
+    // main mod metadata plus its test-only classes and structure fixture.
+    runs.configureEach { loadedMods = [mods.getByName(project.mod_id)] }
+    runs.named('gameTestServer') { loadedMods = [mods.getByName('verification')] }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+    options.release = 21
+    options.compilerArgs += ['-proc:none']
+}
+
+tasks.named('processResources', ProcessResources) {
+    def metadata = [mod_id: mod_id, mod_name: mod_name, mod_version: mod_version,
+                    mod_authors: mod_authors, mod_license: mod_license]
+    inputs.properties metadata
+    filesMatching('META-INF/neoforge.mods.toml') { expand metadata }
+    exclude '**/.DS_Store'
+}
+
+tasks.named('jar', Jar) {
+    preserveFileTimestamps = false
+    reproducibleFileOrder = true
+    manifest.attributes('Implementation-Title': mod_name,
+            'Implementation-Version': mod_version,
+            'Implementation-Vendor': mod_authors)
+}
+
+// Native GameTests use the test source set without JUnit discovery.
+tasks.named('test', Test) { failOnNoDiscoveredTests = false }
+
+tasks.named('runGameTestServer') {
+    doFirst { ext.verificationStartedAt = System.currentTimeMillis() }
+    doLast {
+        def resultLog = file('build/game-test-run/logs/latest.log')
+        if (!resultLog.isFile() || resultLog.lastModified() < verificationStartedAt
+                || !(resultLog.text =~ /All [1-9][0-9]* required tests passed/).find()) {
+            throw new GradleException('Native verification did not finish successfully. See build/game-test-run/logs/latest.log.')
+        }
+    }
+}
+
+idea.module {
+    downloadSources = true
+    downloadJavadoc = true
+    excludeDirs += files('run', 'libs', 'out')
+}
+
+// Local paths and one-way modpack synchronization remain private.
+def devPack = file('tools/dev-pack.gradle')
+if (devPack.isFile()) apply from: devPack

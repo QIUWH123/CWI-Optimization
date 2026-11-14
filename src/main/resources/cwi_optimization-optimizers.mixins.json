@@ -1,0 +1,23 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "net.quiwh.cwioptimization.mixin.optimizer",
+  "plugin": "net.quiwh.cwioptimization.mixin.OptimizerMixinPlugin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "RecipeEpochMixin",
+    "FurnaceCacheMixin",
+    "FastSuiteCacheMixin",
+    "FastSuiteListMixin",
+    "FastSuitePriorityMixin",
+    "GcSchedulerMixin"
+  ],
+  "client": [
+    "VisualCounterMixin",
+    "BufferLightMixin",
+    "PanelBoundsMixin",
+    "FanCacheMixin",
+    "BlockEntityDistanceMixin"
+  ],
+  "injectors": { "defaultRequire": 1 }
+}

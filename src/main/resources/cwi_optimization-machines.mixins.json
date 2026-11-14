@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "net.quiwh.cwioptimization.mixin",
+  "plugin": "net.quiwh.cwioptimization.mixin.MachineMixinPlugin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "ratatouille.IrrigationTowerMixin",
+    "ratatouille.SpreaderMixin",
+    "optical.OpticalSourceMixin",
+    "rubberworks.SapperMixin"
+  ],
+  "injectors": { "defaultRequire": 1 }
+}

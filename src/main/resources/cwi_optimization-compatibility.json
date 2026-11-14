@@ -1,0 +1,198 @@
+{
+  "loading": [
+    {
+      "id": "reallyfastload",
+      "version": "1.0.0",
+      "classes": {
+        "com/leclowndu93150/reallyfastload/mixin/client/ClientPacketListenerMixin.class": "9b665196d6fb00ea75e72ce96d337fc25fd4bfb67bae4d12b6f84087c376f54d",
+        "com/leclowndu93150/reallyfastload/config/RFLConfig.class": "66d00bfa589b33423eb4f62a58e12cf1efcb058a226b0a50baf2257f352d8b86"
+      }
+    }
+  ],
+  "tint": [
+    {
+      "id": "gnetum",
+      "version": "3.3.6",
+      "classes": {
+        "me/decce/gnetum/mixins/compat/ItemRendererMixin.class": "23c5a795ad51534b54c143c4f42bf0db47be3f38fad5ac6ac392205eab85459a"
+      }
+    }
+  ],
+  "counter": [
+    {
+      "id": "createfpsoptimizer",
+      "version": "4.0.4",
+      "classes": {
+        "dev/noxora/createfpsoptimizer/OptimizationController.class": "06b8b4a4c234d4fd40a7bcb42ae0e3cbec8d052fb69d42c0183c43abb49bdf1b"
+      }
+    },
+    {
+      "id": "create",
+      "version": "6.0.10",
+      "classes": {
+        "com/simibubi/create/content/kinetics/base/KineticBlockEntity.class": "3bce80f18d09ccff5e6c1b5cdbeeb2793f0a507006879b267148cde0df443572"
+      }
+    }
+  ],
+  "light": [
+    {
+      "id": "createbetterfps",
+      "version": "1.1.5",
+      "classes": {
+        "com/moepus/createbetterfps/renderer/SodiumByteBuffer.class": "fc806adb688a8965fd84dff1e8cd2dadf219bb8b4864d7214327d675fe2ba479"
+      }
+    }
+  ],
+  "chain_bounds": [
+    {
+      "id": "smart_bounds",
+      "version": "1.0.0",
+      "classes": {
+        "net/liukrast/smartbounds/mixin/ChainConveyorBlockEntityMixin.class": "71b3236f9c93b51fd147a1136f6ca6bdcef4fb10b4144e5c544dfd0467a2371d"
+      }
+    },
+    {
+      "id": "stellarcreateoptimization",
+      "version": "1.1.1fix",
+      "classes": {
+        "org/stellarvan/stellarcreateoptimization/mixin/client/chainconveyor/ChainConveyorBlockEntityClientMixin.class": "f22d6491563eaffd02f9a7f54e602d1c3cbf679f43daa36513074bc435daa536",
+        "org/stellarvan/stellarcreateoptimization/client/chainconveyor/ChainConveyorRenderBounds.class": "519632c578c0c9986d319cf544c82bcba4f12b327c1c62c65a89685004bd0498"
+      }
+    },
+    {
+      "id": "create",
+      "version": "6.0.10",
+      "classes": {
+        "com/simibubi/create/content/kinetics/chainConveyor/ChainConveyorBlockEntity.class": "dabb70c08e6de3c72c5aa4c47f296e93f037aad89cdbcf59343ae67adfd6c05f"
+      }
+    }
+  ],
+  "panel": [
+    {
+      "id": "smart_bounds",
+      "version": "1.0.0",
+      "classes": {
+        "net/liukrast/smartbounds/mixin/FactoryPanelBlockEntityMixin.class": "cad71db38b90a20ea5aa7c0e98d3d7010a31e8e67770aea6aaed1682e1a9f717"
+      }
+    },
+    {
+      "id": "create",
+      "version": "6.0.10",
+      "classes": {
+        "com/simibubi/create/content/logistics/factoryBoard/FactoryPanelBlockEntity.class": "da65871e2d9a29856beb9229d9897cee5a3b19d0181b4caf1ec0eb867ba3ffb3",
+        "com/simibubi/create/content/logistics/factoryBoard/FactoryPanelBehaviour.class": "3bb7e0f86f47b6249b2cbd4e52b87000c79dd45d7d864ebc192bba7bffd84b19"
+      }
+    }
+  ],
+  "fan": [
+    {
+      "id": "stellarcreateoptimization",
+      "version": "1.1.1fix",
+      "classes": {
+        "org/stellarvan/stellarcreateoptimization/mixin/fan/AirCurrentMixin.class": "7066887e9625bd1c9e47d0ad6616e0a7d7b37b7502bbb14a90fe43edce251581"
+      }
+    },
+    {
+      "id": "asyncparticles",
+      "version": "21.1.5.0-beta.1",
+      "classes": {
+        "neoforge/fun/qu_an/minecraft/asyncparticles/client/mixin/compat/neoforge/create/MixinAirCurrent.class": "5f5ed6ce85bf6e6babb7a8ac089c794a93ac2df47e514f2563dd0c2ce3235536"
+      }
+    },
+    {
+      "id": "create",
+      "version": "6.0.10",
+      "classes": {
+        "com/simibubi/create/content/kinetics/fan/AirCurrent.class": "16f2642ec5aee301fa4ab5f3663d4226d08ce8c01f61733abfef4ff90bbd8ba6"
+      }
+    }
+  ],
+  "furnace": [
+    {
+      "id": "fastfurnace",
+      "version": "9.0.1",
+      "classes": {
+        "dev/shadowsoffire/fastfurnace/mixin/MixinAbstractFurnaceBlockEntity.class": "792f5d876773fa9e8509ad0fbfa18ccfd9d7ac4b224ea5b2b530137abdefcd6e"
+      }
+    }
+  ],
+  "noise": [
+    {
+      "id": "zfastnoise",
+      "version": "1.0.13+1.21.1+neoforge",
+      "classes": {
+        "org/codeberg/zenxarch/fastnoise/mixin/perf/noise/NoiseChunkGeneratorMixin.class": "f8bcedf97eda581672ca2de81a69fa60aa11b5feefc717479bbbb73e006f5c0e"
+      }
+    },
+    {
+      "id": "noisium",
+      "version": "2.7.0+mc1.21-1.21.1",
+      "classes": {
+        "io/github/steveplays28/noisium/mixin/compat/lithium/LithiumNoiseChunkGeneratorMixin.class": "07a3544096c6c0a53777ddd9f65f0287aa3512ddf06c67ded5f766fcebd8af33"
+      }
+    },
+    {
+      "id": "lithium",
+      "version": "0.15.4+mc1.21.1",
+      "classes": {}
+    }
+  ],
+  "ram": [
+    {
+      "id": "ramization",
+      "version": "1.0.0",
+      "classes": {
+        "com/konrados/ramization/memory/SmartGCScheduler.class": "ae5994491ef7eb97c5438e70ae7d7da28c6a35c6cdf13e0c37a12c373d2020fc",
+        "com/konrados/ramization/mixin/MixinTextureAtlas.class": "9f9b64253ea633e283c05474dadfdb25b4bdfebc69d9edf0341f5ebf9be10d95"
+      }
+    }
+  ],
+  "distance": [
+    {
+      "id": "chloride",
+      "version": "1.8.1",
+      "classes": {
+        "me/srrapero720/chloride/impl/EntityCulling.class": "a7726132d433624117e023beab375c8ae31f45de9b19ffe3d31001c2d8b33b5e"
+      }
+    }
+  ],
+  "fastsuite": [
+    {
+      "id": "fastsuite",
+      "version": "6.0.7",
+      "classes": {
+        "dev/shadowsoffire/fastsuite/AuxRecipeManager.class": "dd2d3730c6bf5ea9bdf750540cb017b76ddfaca4bc4d64f88ceba9f185f6d281",
+        "dev/shadowsoffire/fastsuite/CachedRecipeList.class": "c35fd9df91abef8e0b1286d45de54ac15d806fe864c4a7ffcbba0cde6f8bba2b",
+        "dev/shadowsoffire/fastsuite/StreamUtils.class": "bfb07888d33f9be33a3866ad0f2b109b7dfa2b8412153174e3485efd5279e9d6"
+      }
+    }
+  ],
+  "fastsuite_priority": [
+    {
+      "id": "fastsuite",
+      "version": "6.0.7",
+      "classes": {
+        "dev/shadowsoffire/fastsuite/AuxRecipeManager.class": "dd2d3730c6bf5ea9bdf750540cb017b76ddfaca4bc4d64f88ceba9f185f6d281",
+        "dev/shadowsoffire/fastsuite/CachedRecipeList.class": "c35fd9df91abef8e0b1286d45de54ac15d806fe864c4a7ffcbba0cde6f8bba2b",
+        "dev/shadowsoffire/fastsuite/StreamUtils.class": "bfb07888d33f9be33a3866ad0f2b109b7dfa2b8412153174e3485efd5279e9d6"
+      }
+    },
+    {
+      "id": "cwi",
+      "version": "0.1.0-dev+1.21.1.build.20261107173523",
+      "classes": {
+        "net/quiwh/cwi/compat/processing/AdvancedProcessing.class": "990dbb6e5abb73f517ff47148e7663cfb661e47e8d331456adc1e95c08312c4c",
+        "net/quiwh/cwi/compat/processing/AdvancedParams.class": "0cc6eba327145dd55d7b77a4769611de18796cbf2f6516f558c8d1653ec061c7",
+        "net/quiwh/cwi/mixin/processing/RecipePriorityMixin.class": "883a95f735052b8d22fdf5e62e1bed51de11a9d3032b86af9a959c124026cc11"
+      }
+    },
+    {
+      "id": "create",
+      "version": "6.0.10",
+      "classes": {
+        "com/simibubi/create/content/processing/recipe/ProcessingRecipe.class": "8a69bdcff607d38a0c2ed58ef9a3702a09ebe9399d9b1198a1bab7233e62b1a8",
+        "com/simibubi/create/content/processing/recipe/ProcessingRecipeParams.class": "3692241cfb394438b82e15b047031d352767fac77e2933d337db037b05b53e45"
+      }
+    }
+  ]
+}
