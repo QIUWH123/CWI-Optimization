@@ -18,8 +18,9 @@ between performance mods used by Create Wasteland Industry.
 
 ## Usage
 
-Place the mod JAR in your instance's `mods/` folder alongside the supported mods,
-then restart Minecraft. Install it on the client and server where the relevant
+Download the JAR from [Releases](https://github.com/QIUWH123/CWI-Optimization/releases)
+and place it in your instance's `mods/` folder alongside the supported mods, then
+restart Minecraft. Install it on the client and server where the relevant
 repairs are needed. Compatible repairs activate automatically; there are no
 controls, commands, configuration files or KubeJS setup steps.
 

@@ -73,6 +73,7 @@ tasks.named('processResources', ProcessResources) {
 tasks.named('jar', Jar) {
     preserveFileTimestamps = false
     reproducibleFileOrder = true
+    from('LICENSE') { into 'META-INF' }
     manifest.attributes('Implementation-Title': mod_name,
             'Implementation-Version': mod_version,
             'Implementation-Vendor': mod_authors)
